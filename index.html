@@ -1,672 +1,645 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Prince Singh | Senior Frontend Developer</title>
-<meta name="description" content="Prince Singh is a senior frontend developer with 8+ years of experience in React, Next.js, Angular and Node.js BFF architecture.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prince KR Singh | Senior Frontend Developer (React, Next.js, TypeScript)</title>
+<meta name="description" content="Prince KR Singh is a Senior Frontend Developer with 8+ years of experience building scalable React.js, Next.js, TypeScript, Angular and Node.js BFF applications for enterprise networking, fintech and logistics platforms. Based in Kolkata, India.">
+<meta name="keywords" content="Prince KR Singh, Senior Frontend Developer, React.js, Next.js, TypeScript, Angular, Node.js, GraphQL, BFF, Kolkata">
+<meta name="author" content="Prince KR Singh">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prince KR Singh | Senior Frontend Developer">
+<meta property="og:description" content="8+ years building scalable React, Next.js, TypeScript, Angular and Node.js BFF applications.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1020">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<script>
-try { var s = localStorage.getItem('theme'); if (s) document.documentElement.setAttribute('data-theme', s); } catch (e) {}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Prince KR Singh",
+  "jobTitle": "Senior Frontend Developer",
+  "email": "mailto:princehyd1993@gmail.com",
+  "telephone": "+918969599251",
+  "address": { "@type": "PostalAddress", "addressLocality": "Kolkata", "addressCountry": "IN" },
+  "sameAs": ["https://www.linkedin.com/in/prince-kr-singh-76784a445"],
+  "knowsAbout": ["React.js", "Next.js", "TypeScript", "Angular", "Node.js", "GraphQL", "Frontend Performance", "System Design"]
+}
 </script>
+
 <style>
-:root {
-  --bg: #EDF1F7;
-  --surface: #FFFFFF;
-  --soft: #E2E9F5;
-  --ink: #101A33;
-  --muted: #56617A;
-  --line: #D3DAE6;
-  --accent: #2545F5;
-  --signal: #E39A0B;
-  --ok: #0FA37F;
-  --display: 'Bricolage Grotesque', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --body: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  box-sizing: border-box;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+:root{
+  --bg:#0b1020; --bg2:#10172b; --card:#141c33; --card-hi:#1a2342;
+  --text:#e8ecf6; --muted:#9aa6c4; --line:rgba(255,255,255,.08);
+  --a1:#6ee7ff; --a2:#8b7bff; --a3:#ff7ad9;
+  --grad:linear-gradient(120deg,var(--a1),var(--a2) 55%,var(--a3));
+  --shadow:0 20px 50px -20px rgba(0,0,0,.6);
+  --radius:18px;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0C1222; --surface: #141C33; --soft: #1B2542; --ink: #E8EDF8; --muted: #9AA6C1;
-    --line: #26314D; --accent: #8398FF; --signal: #FFC15A; --ok: #3DDBB0;
-  }
+[data-theme="light"]{
+  --bg:#f6f8fd; --bg2:#eef2fb; --card:#ffffff; --card-hi:#f3f6ff;
+  --text:#0f1730; --muted:#55627f; --line:rgba(15,23,48,.1);
+  --a1:#0891b2; --a2:#5b4bff; --a3:#d6249f;
+  --shadow:0 20px 50px -25px rgba(30,40,90,.35);
 }
-:root[data-theme="dark"] {
-  --bg: #0C1222; --surface: #141C33; --soft: #1B2542; --ink: #E8EDF8; --muted: #9AA6C1;
-  --line: #26314D; --accent: #8398FF; --signal: #FFC15A; --ok: #3DDBB0;
-}
-html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px); scroll-behavior: smooth; background: var(--bg); }
-*, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.65 var(--body); -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.02em; line-height: 1.1; }
-p { margin: 0 0 1em; }
-a { color: inherit; }
-ul { margin: 0; padding: 0; list-style: none; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:92px 0;position:relative}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--a1);margin-bottom:10px}
+h2.title{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.lead{color:var(--muted);max-width:68ch}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* Header */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.bar { display: flex; align-items: center; gap: 24px; min-height: 64px; flex-wrap: wrap; }
-.brand { font: 700 1.2rem var(--display); text-decoration: none; letter-spacing: -0.02em; }
-.top nav { margin-left: auto; display: flex; gap: 24px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
-.top nav::-webkit-scrollbar { display: none; }
-.top nav a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: .98rem; padding: 6px 0; }
-.top nav a:hover { color: var(--ink); }
-.icon-btn { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); display: grid; place-items: center; cursor: pointer; }
-.icon-btn:hover { border-color: var(--ink); }
-@media (max-width: 720px) {
-  .bar { gap: 12px; padding-bottom: 8px; padding-top: 8px; }
-  .icon-btn { margin-left: auto; }
-  .top nav { order: 3; width: 100%; margin-left: 0; gap: 20px; }
-}
+/* background glow */
+.glow{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.glow i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28}
+.glow i:nth-child(1){width:520px;height:520px;background:var(--a2);top:-140px;left:-120px}
+.glow i:nth-child(2){width:460px;height:460px;background:var(--a1);top:30%;right:-160px;opacity:.18}
+.glow i:nth-child(3){width:420px;height:420px;background:var(--a3);bottom:-160px;left:25%;opacity:.14}
+[data-theme="light"] .glow i{opacity:.14}
 
-/* Hero */
-.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: center; padding: clamp(44px, 7vw, 96px) 0 clamp(40px, 5vw, 64px); }
-.hero h1 { font-weight: 800; font-size: clamp(3.4rem, 9vw, 7.2rem); line-height: .9; letter-spacing: -0.04em; }
-.hero h1 span { display: block; }
-.role { font: 500 clamp(1.3rem, 2.5vw, 1.8rem)/1.2 var(--display); margin: 28px 0 14px; letter-spacing: -0.015em; }
-.pitch { color: var(--muted); max-width: 52ch; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 1.5px solid var(--ink); transition: transform .15s ease, background .15s ease; }
-.btn.solid { background: var(--ink); color: var(--bg); }
-.btn.ghost { background: transparent; color: var(--ink); }
-.btn:hover { transform: translateY(-2px); }
-.net { position: relative; aspect-ratio: 1 / .95; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background-image: radial-gradient(var(--line) 1px, transparent 1px); background-size: 22px 22px; }
-.net canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; }
-.net .hint { position: absolute; left: 16px; bottom: 14px; display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); pointer-events: none; }
-.net .hint i { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); display: inline-block; }
-.tip { position: absolute; width: 230px; padding: 12px 14px; background: var(--ink); color: var(--bg); border-radius: 12px; font-size: .88rem; line-height: 1.45; pointer-events: none; transform: translateX(-50%); z-index: 3; }
-.tip[hidden] { display: none; }
-.tip strong { display: block; font: 700 1rem var(--display); margin-bottom: 2px; }
-@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .net { aspect-ratio: 1 / .9; } }
-
-/* Facts */
-.facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.fact { padding: 26px clamp(14px, 2vw, 28px); border-left: 1px solid var(--line); }
-.fact:first-child { border-left: 0; padding-left: 0; }
-.fact b { display: block; font: 800 clamp(2rem, 4vw, 3rem)/1 var(--display); letter-spacing: -0.03em; }
-.fact span { display: block; margin-top: 8px; color: var(--muted); font-size: .95rem; line-height: 1.4; }
-@media (max-width: 760px) {
-  .facts { grid-template-columns: 1fr 1fr; }
-  .fact:nth-child(3) { border-left: 0; padding-left: 0; }
-  .fact:nth-child(n+3) { border-top: 1px solid var(--line); }
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:saturate(1.4) blur(14px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:1.1rem}
+.logo span{color:var(--a1)}
+nav ul{display:flex;gap:6px;list-style:none;align-items:center}
+nav a.link{padding:8px 12px;border-radius:10px;font-size:.92rem;color:var(--muted);transition:.2s}
+nav a.link:hover,nav a.link.active{color:var(--text);background:var(--card)}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;display:grid;place-items:center;transition:.2s}
+.icon-btn:hover{transform:translateY(-2px);border-color:var(--a1)}
+.burger{display:none}
+@media (max-width:860px){
+  .burger{display:grid}
+  nav ul{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg2);border-bottom:1px solid var(--line);padding:12px 20px 18px;display:none}
+  nav ul.open{display:flex}
 }
 
-/* Sections */
-section { padding: clamp(60px, 8vw, 108px) 0; }
-h2 { font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.3rem); margin-bottom: 16px; max-width: 20ch; }
-.lead { color: var(--muted); max-width: 60ch; font-size: 1.15rem; margin-bottom: 44px; }
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.85rem;color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.4rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:20px 0 14px}
+.role{font-family:"JetBrains Mono",monospace;font-size:clamp(1rem,2.2vw,1.3rem);color:var(--a1);min-height:2em}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--a1);vertical-align:-3px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{margin:12px 0 28px;font-size:1.06rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:14px;font-weight:600;font-size:.96rem;border:1px solid var(--line);background:var(--card);transition:.25s;cursor:pointer;color:var(--text)}
+.btn:hover{transform:translateY(-3px);border-color:var(--a1)}
+.btn.primary{background:var(--grad);color:#07101f;border:0;box-shadow:0 14px 34px -14px var(--a2)}
+.btn.primary:hover{box-shadow:0 18px 40px -12px var(--a2)}
+.socials{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.chip-link{font-size:.88rem;color:var(--muted);padding:6px 12px;border:1px dashed var(--line);border-radius:10px;transition:.2s}
+.chip-link:hover{color:var(--text);border-color:var(--a1)}
 
-/* About */
-.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 88px); }
-.about p { max-width: 62ch; }
-.duties li { padding: 20px 0; border-top: 1px solid var(--line); }
-.duties li:last-child { border-bottom: 1px solid var(--line); }
-.duties h3 { font-size: 1.3rem; margin-bottom: 6px; }
-.duties p { margin: 0; color: var(--muted); font-size: 1rem; }
-@media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+/* code card */
+.code{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transform:perspective(1100px) rotateY(-6deg) rotateX(2deg);transition:transform .5s}
+.code:hover{transform:perspective(1100px) rotateY(0) rotateX(0)}
+.code-bar{display:flex;gap:7px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--card-hi)}
+.code-bar b{width:11px;height:11px;border-radius:50%;display:block}
+.code-bar b:nth-child(1){background:#ff5f57}.code-bar b:nth-child(2){background:#febc2e}.code-bar b:nth-child(3){background:#28c840}
+.code-bar span{margin-left:10px;font-size:.78rem;color:var(--muted)}
+.code pre{padding:20px;font-size:.82rem;line-height:1.75;overflow-x:auto;font-family:"JetBrains Mono",monospace;color:var(--text)}
+.k{color:#c792ea}.s{color:#9ece6a}.f{color:#6ee7ff}.c{color:var(--muted)}.n{color:#ffb86c}
+[data-theme="light"] .k{color:#8a3fd1}[data-theme="light"] .s{color:#2f7d32}[data-theme="light"] .f{color:#0a7f9f}[data-theme="light"] .n{color:#b45309}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.code{transform:none}}
 
-/* Work */
-.work { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 28px; align-items: start; }
-.tabs { display: flex; flex-direction: column; gap: 4px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 84px); }
-.tab { text-align: left; background: transparent; border: 0; border-left: 3px solid var(--line); padding: 14px 16px; cursor: pointer; color: var(--muted); font: inherit; border-radius: 0 12px 12px 0; }
-.tab strong { display: block; font: 700 1.08rem var(--display); color: var(--ink); letter-spacing: -0.01em; }
-.tab span { font-size: .88rem; }
-.tab:hover { background: var(--soft); }
-.tab[aria-selected="true"] { border-left-color: var(--accent); background: var(--surface); color: var(--ink); }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
-.panel.swap > * { animation: swap .28s ease; }
-@keyframes swap { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-.pv { background: var(--soft); padding: 18px; }
-.pv svg { display: block; width: 100%; height: auto; max-height: 210px; }
-.pv text { font-family: var(--body); font-size: 13px; font-weight: 500; fill: var(--ink); }
-.pv .box { fill: var(--surface); stroke: var(--ink); stroke-width: 1.5; }
-.pv .hot { fill: var(--signal); stroke: var(--ink); stroke-width: 1.5; }
-.pv .blue { fill: var(--accent); stroke: none; }
-.pv .ln { stroke: var(--muted); stroke-width: 1.5; fill: none; }
-.pv .path { stroke: var(--accent); stroke-width: 3; fill: none; stroke-linecap: round; }
-.pv .dot { fill: var(--surface); stroke: var(--ink); stroke-width: 1.5; }
-.pv .bar { fill: var(--accent); }
-.pbody { padding: clamp(22px, 3vw, 40px); }
-.ptag { color: var(--muted); font-size: .95rem; margin-bottom: 8px; }
-.pbody h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 14px; }
-.psum { max-width: 62ch; }
-.metrics { display: flex; flex-wrap: wrap; gap: 14px 40px; margin: 26px 0 30px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.metrics li { min-width: 130px; }
-.metrics b { display: block; font: 800 2.3rem/1 var(--display); letter-spacing: -0.03em; color: var(--accent); }
-.metrics span { font-size: .9rem; color: var(--muted); display: block; margin-top: 6px; max-width: 18ch; line-height: 1.35; }
-.pcols { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 32px; }
-.pcols h4 { font-size: 1.05rem; margin-bottom: 12px; }
-.pcols ul.pts li { position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 1rem; line-height: 1.55; }
-.pcols ul.pts li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 8px; border-radius: 2px; background: var(--signal); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: .9rem; background: var(--bg); }
-@media (max-width: 960px) {
-  .work { grid-template-columns: 1fr; }
-  .tabs { position: static; flex-direction: row; overflow-x: auto; gap: 8px; padding-bottom: 6px; scrollbar-width: thin; }
-  .tab { flex: 0 0 auto; border-left: 0; border-bottom: 3px solid var(--line); border-radius: 12px 12px 0 0; min-width: 170px; }
-  .tab[aria-selected="true"] { border-bottom-color: var(--accent); }
-  .pcols { grid-template-columns: 1fr; }
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-10px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-align:center;transition:.3s}
+.stat:hover{transform:translateY(-5px);border-color:var(--a2)}
+.stat strong{display:block;font-size:2.3rem;font-weight:800;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;margin-top:30px}
+.about-grid p+p{margin-top:14px}
+.about-grid p{color:var(--muted)}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:16px;align-content:start}
+.fact small{display:block;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.fact div{font-weight:600}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* skills */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:34px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:.3s}
+.skill:hover{transform:translateY(-5px);border-color:var(--a1);box-shadow:var(--shadow)}
+.skill h3{font-size:1rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.skill h3 em{font-style:normal;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--grad);color:#07101f;font-size:.8rem;font-weight:800}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:.8rem;padding:5px 11px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);color:var(--muted);transition:.2s}
+.tag:hover{color:var(--text);border-color:var(--a2)}
+.tag.hot{color:var(--text);border-color:color-mix(in srgb,var(--a1) 50%,transparent)}
+
+/* timeline */
+.timeline{margin-top:38px;position:relative;padding-left:30px}
+.timeline:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a1),var(--a2),var(--a3));opacity:.55}
+.job{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:22px;transition:.3s}
+.job:hover{border-color:var(--a2);box-shadow:var(--shadow)}
+.job:before{content:"";position:absolute;left:-29px;top:32px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--a1)}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;margin-bottom:6px}
+.job h3{font-size:1.2rem;letter-spacing:-.01em}
+.job .co{color:var(--a1);font-weight:600}
+.job .when{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--muted)}
+.proj{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.proj h4{font-size:.98rem;margin-bottom:8px}
+.proj ul{list-style:none;display:grid;gap:7px;color:var(--muted);font-size:.93rem}
+.proj li{padding-left:20px;position:relative}
+.proj li:before{content:"▹";position:absolute;left:0;color:var(--a1)}
+.proj .tags{margin-top:12px}
+
+/* projects */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:34px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;transition:.35s}
+.card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:.4s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--a2)}
+.card:hover:before{transform:scaleX(1)}
+.card .kind{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--a3)}
+.card h3{font-size:1.2rem;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:.93rem;flex:1}
+.metric{display:flex;gap:18px;flex-wrap:wrap}
+.metric div{font-size:.8rem;color:var(--muted)}
+.metric b{display:block;font-size:1.25rem;color:var(--text)}
+
+/* awards + edu */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.panel h3{margin-bottom:14px;font-size:1.1rem}
+.panel li{list-style:none;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:14px;font-size:.93rem}
+.panel li:last-child{border:0}
+.panel li span{color:var(--muted);white-space:nowrap;font-size:.82rem}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+
+/* contact */
+.contact-box{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(28px,5vw,56px);text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.contact-box:before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 30% 20%,color-mix(in srgb,var(--a2) 30%,transparent),transparent 45%),radial-gradient(circle at 80% 80%,color-mix(in srgb,var(--a1) 25%,transparent),transparent 45%);z-index:0}
+.contact-box>*{position:relative;z-index:1}
+.contact-box .lead{margin:10px auto 26px}
+.contact-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
 }
-
-/* Approach */
-.flow { display: grid; grid-template-columns: 1fr 44px 1.15fr 44px 1fr; align-items: stretch; margin-bottom: 44px; }
-.stage { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
-.stage.core { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.stage h3 { font-size: 1.35rem; margin-bottom: 4px; }
-.stage small { display: block; font-size: .9rem; opacity: .75; margin-bottom: 16px; }
-.stage li { padding: 8px 0; border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); font-size: .98rem; }
-.link { display: grid; place-items: center; color: var(--muted); }
-.link svg { width: 32px; height: 32px; }
-.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 4vw, 48px); }
-.principles h3 { font-size: 1.3rem; margin-bottom: 8px; }
-.principles p { color: var(--muted); font-size: 1rem; }
-@media (max-width: 900px) {
-  .flow { grid-template-columns: 1fr; }
-  .link { height: 40px; transform: rotate(90deg); }
-  .principles { grid-template-columns: 1fr; }
-}
-
-/* Timeline */
-.tl { position: relative; margin-left: 8px; padding-left: clamp(24px, 4vw, 48px); border-left: 2px solid var(--line); }
-.job { position: relative; padding-bottom: clamp(36px, 5vw, 60px); }
-.job:last-child { padding-bottom: 0; }
-.job::before { content: ""; position: absolute; left: calc(-1 * clamp(24px, 4vw, 48px) - 9px); top: 10px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
-.job.now::before { background: var(--accent); }
-.jhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 24px; margin-bottom: 4px; }
-.jhead h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-.jdate { color: var(--muted); font-weight: 500; }
-.jrole { color: var(--muted); margin-bottom: 16px; }
-.job ul.pts li { position: relative; padding-left: 20px; margin-bottom: 8px; max-width: 78ch; }
-.job ul.pts li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 8px; border-radius: 2px; background: var(--signal); }
-.clients { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 4px 0 20px; }
-.clients div { padding: 16px 18px; border: 1px solid var(--line); background: var(--surface); border-radius: 14px; }
-.clients b { display: block; font: 700 1.1rem var(--display); margin-bottom: 4px; }
-.clients span { font-size: .93rem; color: var(--muted); line-height: 1.5; display: block; }
-@media (max-width: 860px) { .clients { grid-template-columns: 1fr; } }
-
-/* Skills */
-.skills > div { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 12px 32px; padding: 20px 0; border-top: 1px solid var(--line); }
-.skills > div:last-child { border-bottom: 1px solid var(--line); }
-.skills h3 { font-size: 1.15rem; padding-top: 3px; }
-@media (max-width: 720px) { .skills > div { grid-template-columns: 1fr; } }
-
-/* Recognition */
-.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 4vw, 48px); }
-.trio h3 { font-size: 1.4rem; margin-bottom: 14px; }
-.trio li { padding: 12px 0; border-top: 1px solid var(--line); }
-.trio li b { display: block; font-weight: 700; }
-.trio li span { color: var(--muted); font-size: .95rem; }
-@media (max-width: 860px) { .trio { grid-template-columns: 1fr; } }
-
-/* Contact */
-.contact { background: var(--ink); color: var(--bg); border-radius: 28px; padding: clamp(32px, 6vw, 80px); margin-bottom: 48px; }
-.contact h2 { max-width: 18ch; }
-.contact p { max-width: 52ch; opacity: .85; font-size: 1.15rem; }
-.contact .actions .btn { border-color: var(--bg); color: var(--bg); }
-.contact .actions .btn.hot { background: var(--signal); border-color: var(--signal); color: #101A33; }
-.facts-line { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 8px 36px; opacity: .85; }
-footer { padding: 8px 0 48px; color: var(--muted); font-size: .92rem; }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
+.skip{position:absolute;left:-999px;top:8px;background:var(--a1);color:#07101f;padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--a1);outline-offset:3px;border-radius:6px}
+@media print{header,.glow,.icon-btn{display:none}.rv{opacity:1;transform:none}}
 </style>
 </head>
-<body id="top">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="glow" aria-hidden="true"><i></i><i></i><i></i></div>
 
-<header class="top">
-  <div class="wrap bar">
-    <a class="brand" href="#top">Prince Singh</a>
-    <nav aria-label="Sections">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">prince<span>.</span>dev</a>
+    <nav aria-label="Primary">
+      <ul id="menu">
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#skills">Skills</a></li>
+        <li><a class="link" href="#experience">Experience</a></li>
+        <li><a class="link" href="#projects">Projects</a></li>
+        <li><a class="link" href="#recognition">Recognition</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+        <li><button class="icon-btn" id="theme" aria-label="Toggle light and dark theme" title="Toggle theme">◐</button></li>
+      </ul>
     </nav>
-    <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark theme">
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
-    </button>
+    <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
   </div>
 </header>
 
-<main>
-<div class="wrap">
-  <div class="hero">
-    <div>
-      <h1><span>Prince</span><span>Singh</span></h1>
-      <p class="role">Senior frontend developer. I build interfaces for systems that never go quiet.</p>
-      <p class="pitch">8+ years shipping React, Next.js and Angular applications, backed by Node.js and TypeScript BFF layers. Today I build network monitoring software for Cisco and IP Infusion at Calsoft, where thousands of devices report in real time.</p>
-      <div class="actions">
-        <a class="btn solid" href="#work">See my work</a>
-        <a class="btn ghost" href="mailto:princekrsingh30031993@gmail.com">Email me</a>
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="badge"><i class="dot"></i> Open to Senior Frontend / Frontend Lead opportunities</span>
+      <h1>Hi, I'm <span class="grad">Prince KR Singh</span></h1>
+      <div class="role" aria-live="polite"><span id="typed"></span><span class="caret"></span></div>
+      <p class="lead">Senior Frontend Developer with 8+ years of experience building scalable, high-performance web applications for enterprise networking, fintech and logistics. I architect React and Next.js front ends and own the Node.js/TypeScript BFF layers behind them.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View my work →</a>
+        <a class="btn" href="Prince_KR_Singh_Resume.pdf" download>⬇ Download resume</a>
+        <a class="btn" href="#contact">Hire me</a>
+      </div>
+      <div class="socials">
+        <a class="chip-link" href="https://www.linkedin.com/in/prince-kr-singh-76784a445" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a class="chip-link" href="mailto:princehyd1993@gmail.com">princehyd1993@gmail.com</a>
+        <a class="chip-link" href="tel:+918969599251">+91 8969599251</a>
+        <span class="chip-link">📍 Kolkata, India</span>
       </div>
     </div>
-    <div class="net" id="netbox">
-      <canvas id="net" role="img" aria-label="Interactive network graph of the technologies Prince works with: React, Next.js, Angular, TypeScript, Node.js BFF, GraphQL, WebSockets and more."></canvas>
-      <div class="tip" id="tip" hidden></div>
-      <div class="hint"><i></i>Live stack map. Hover a node to see how it connects.</div>
+    <div class="rv" style="transition-delay:.15s">
+      <div class="code" aria-hidden="true">
+        <div class="code-bar"><b></b><b></b><b></b><span class="mono">prince.ts</span></div>
+<pre><span class="k">const</span> <span class="f">prince</span> = {
+  role:   <span class="s">"Senior Frontend Developer"</span>,
+  years:  <span class="n">8</span>,
+  stack:  [<span class="s">"React"</span>, <span class="s">"Next.js"</span>, <span class="s">"TypeScript"</span>,
+           <span class="s">"Angular"</span>, <span class="s">"Node.js BFF"</span>, <span class="s">"GraphQL"</span>],
+  loves:  [<span class="s">"performance"</span>, <span class="s">"clean code"</span>,
+           <span class="s">"system design"</span>],
+  ai:     [<span class="s">"Claude Code"</span>, <span class="s">"Copilot"</span>, <span class="s">"Cursor"</span>],
+  based:  <span class="s">"Kolkata, IN"</span>,
+  <span class="f">hireMe</span>() { <span class="k">return</span> <span class="k">true</span>; }
+};
+<span class="c">// Let's build something fast.</span></pre>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="facts">
-    <div class="fact"><b>8+</b><span>years building production web apps</span></div>
-    <div class="fact"><b>1,000+</b><span>network devices monitored through the Cisco platform</span></div>
-    <div class="fact"><b>40%</b><span>lower platform latency after render optimization</span></div>
-    <div class="fact"><b>98%</b><span>test coverage on critical payment flows</span></div>
+<!-- STATS -->
+<div class="wrap">
+  <div class="stats">
+    <div class="stat rv"><strong data-count="8" data-suffix="+">0</strong><span>Years of experience</span></div>
+    <div class="stat rv" style="transition-delay:.08s"><strong data-count="1000" data-suffix="+">0</strong><span>Network devices monitored</span></div>
+    <div class="stat rv" style="transition-delay:.16s"><strong data-count="40" data-suffix="%">0</strong><span>Platform latency reduced</span></div>
+    <div class="stat rv" style="transition-delay:.24s"><strong data-count="98" data-suffix="%">0</strong><span>Peak test coverage</span></div>
   </div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="wrap">
-    <h2>Frontend work with an architect's view of the whole system</h2>
-    <p class="lead">I care about what happens after the browser: the API contract, the auth flow, the cache, the deploy.</p>
-    <div class="about">
-      <div>
-        <p>I am a senior frontend developer based in Hyderabad. My core is React.js, Next.js and TypeScript, with deep Angular experience from enterprise and fintech products.</p>
-        <p>I own Node.js and TypeScript Backend-for-Frontend layers that aggregate APIs, shape responses and handle auth, so client apps stay small and the microservices behind them can change freely. I have also prototyped Kotlin services and designed REST and gRPC APIs.</p>
-        <p>I choose rendering strategy per screen (CSR, SSR or ISR), track Core Web Vitals, and back every release with Jest, React Testing Library, Cypress, Playwright or Jasmine and Karma. I use Claude Code, GitHub Copilot and Cursor to move faster, and I review everything they produce.</p>
+    <div class="rv">
+      <div class="eyebrow">// about</div>
+      <h2 class="title">Frontend engineer who thinks in <span class="grad">systems</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="rv">
+        <p>I design and ship production React.js, Next.js and TypeScript applications, with strong Angular experience from fintech and enterprise work. I own the full lifecycle: requirements, architecture, API contracts, delivery and post-production monitoring.</p>
+        <p>I also build the Node.js/TypeScript BFF (Backend-for-Frontend) layers that aggregate APIs, reshape responses and centralize auth for microservice backends. I have working exposure to Kotlin and Java for backend prototyping and REST/gRPC API design.</p>
+        <p>I care about Core Web Vitals, CSR vs SSR vs ISR trade-offs, accessible UI and strong test coverage (Jest, React Testing Library, Cypress, Playwright, Jasmine/Karma). I use Claude Code, GitHub Copilot and Cursor to move faster, and I validate everything they produce. I also mentor engineers and work closely with product teams to resolve ambiguous problems.</p>
       </div>
-      <ul class="duties">
-        <li><h3>Fast interfaces at scale</h3><p>Memoization, virtualized lists, code splitting and lazy loading for dashboards that render live data.</p></li>
-        <li><h3>Middleware that keeps clients simple</h3><p>BFF layers using Node.js, Express and Next.js API routes over REST, GraphQL and gRPC services.</p></li>
-        <li><h3>Quality built in</h3><p>TypeScript strict mode, ESLint, SonarQube and test suites reaching 95 to 98% coverage.</p></li>
-        <li><h3>Teams that grow</h3><p>Code reviews, architecture guidance and documentation that shorten onboarding for junior developers.</p></li>
-      </ul>
+      <aside class="facts rv" style="transition-delay:.12s">
+        <div class="fact"><small>Current role</small><div>Senior Development Engineer, Calsoft Inc.</div></div>
+        <div class="fact"><small>Location</small><div>Kolkata, India</div></div>
+        <div class="fact"><small>Education</small><div>B.Tech, BPUT (2011 – 2015)</div></div>
+        <div class="fact"><small>Focus</small><div>React · Next.js · TypeScript · Node.js BFF</div></div>
+        <div class="fact"><small>Domains</small><div>Networking · FinTech · Logistics</div></div>
+      </aside>
     </div>
   </div>
 </section>
 
-<section id="work">
+<!-- SKILLS -->
+<section id="skills" style="background:linear-gradient(var(--bg),var(--bg2),var(--bg))">
   <div class="wrap">
-    <h2>Selected work</h2>
-    <p class="lead">Five projects from network operations, fintech and logistics. Pick one to see what I built and what changed.</p>
-    <div class="work">
-      <div class="tabs" role="tablist" aria-label="Projects" aria-orientation="vertical" id="tabs"></div>
-      <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+    <div class="rv">
+      <div class="eyebrow">// toolbox</div>
+      <h2 class="title">Technical <span class="grad">skills</span></h2>
+      <p class="lead">What I use to design, build, test and ship modern web applications.</p>
     </div>
+    <div class="skill-grid" id="skillGrid"></div>
   </div>
 </section>
 
-<section id="approach" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-  <div class="wrap">
-    <h2>How I structure a frontend system</h2>
-    <p class="lead">A thin client, an owned BFF layer, and services that stay free to evolve.</p>
-    <div class="flow">
-      <div class="stage">
-        <h3>Client apps</h3>
-        <small>React, Next.js, Angular</small>
-        <ul>
-          <li>Component-driven UI</li>
-          <li>React Query and NgRx state</li>
-          <li>Lazy routes and code splitting</li>
-          <li>WebSocket live updates</li>
-        </ul>
-      </div>
-      <div class="link"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16h22m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="stage core">
-        <h3>Node.js and TypeScript BFF</h3>
-        <small>Owned by the frontend team</small>
-        <ul>
-          <li>Aggregates calls across services</li>
-          <li>Reshapes responses for each screen</li>
-          <li>Centralizes JWT, OAuth and Keycloak auth</li>
-          <li>Runs as Next.js API routes or Express</li>
-        </ul>
-      </div>
-      <div class="link"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 16h22m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="stage">
-        <h3>Core services</h3>
-        <small>Microservices and data</small>
-        <ul>
-          <li>REST, GraphQL and gRPC APIs</li>
-          <li>Kotlin and Java services</li>
-          <li>PostgreSQL, MongoDB, Elasticsearch</li>
-          <li>Swagger contracts with backend teams</li>
-        </ul>
-      </div>
-    </div>
-    <div class="principles">
-      <div><h3>Pick the rendering strategy per screen</h3><p>Live dashboards suit client rendering. Marketing pages need SSR or ISR. My Next.js dashboard proof of concept improved Time-to-Interactive by about 35%.</p></div>
-      <div><h3>Keep clients thin</h3><p>Moving aggregation and auth into a BFF cut client-side data fetching and made real-time device status updates more reliable.</p></div>
-      <div><h3>Measure before and after</h3><p>Bundle size, Core Web Vitals and render time guide each change, which is how IP Maestro gained 30% in performance.</p></div>
-    </div>
-  </div>
-</section>
-
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <h2>Experience</h2>
-    <p class="lead">Four companies across enterprise networking, logistics and fintech.</p>
-    <div class="tl">
-      <div class="job now">
-        <div class="jhead"><h3>Calsoft Inc.</h3><span class="jdate">Sep 2022 to present, Kolkata</span></div>
-        <p class="jrole">Senior Development Engineer</p>
-        <div class="clients">
-          <div><b>Cisco</b><span>Real-time network monitoring platform for 1,000+ devices. 40% lower latency.</span></div>
-          <div><b>IP Infusion</b><span>IP Maestro, a Next.js console for OcNOS devices with an owned BFF layer.</span></div>
-          <div><b>Internal research</b><span>Health dashboard and topology visualizer proofs of concept, with a Kotlin backend benchmark.</span></div>
+    <div class="rv">
+      <div class="eyebrow">// experience</div>
+      <h2 class="title">Where I've <span class="grad">built things</span></h2>
+    </div>
+    <div class="timeline">
+
+      <article class="job rv">
+        <div class="job-head">
+          <h3>Senior Development Engineer · <span class="co">Calsoft Inc.</span></h3>
+          <span class="when">Sep 2022 – Present · Kolkata</span>
         </div>
-        <ul class="pts">
-          <li>Own features end to end, from component architecture and API contracts to responsive delivery and post-production monitoring.</li>
-          <li>Mentored 3 junior developers through code reviews, architecture guidance and best-practice documentation.</li>
-          <li>Recognized with the Appreciation Award (July 2025) and Star Employee (September 2025).</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="jhead"><h3>Agility E-Services</h3><span class="jdate">Jan 2021 to Mar 2022, Hyderabad</span></div>
-        <p class="jrole">Software Engineer</p>
-        <ul class="pts">
-          <li>Shipa Freight: improved shipment tracking accuracy by 30% and delivered 5 interactive dashboards for operations teams.</li>
-          <li>Agility Logistics Parks: built a multi-country site covering 8+ countries and 18+ locations, with English and Arabic support through React i18next.</li>
-          <li>Reached 95% unit test coverage and set testing practices the frontend team adopted.</li>
-          <li>Named Best UI Developer in December 2021.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="jhead"><h3>RupayaPay Payment Pvt. Ltd.</h3><span class="jdate">Apr 2020 to Jan 2021, Hyderabad</span></div>
-        <p class="jrole">Software Engineer</p>
-        <ul class="pts">
-          <li>Integrated Stripe with tokenization in an Angular SPA for PCI-compliant, high-volume transactions.</li>
-          <li>Built React views for payment status and transaction monitoring, with real-time updates over WebSockets.</li>
-          <li>Reached 98% test coverage and set up Jenkins CI/CD pipelines.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <div class="jhead"><h3>USHER Technologies Pvt Ltd</h3><span class="jdate">Feb 2018 to Mar 2020, Hyderabad</span></div>
-        <p class="jrole">Software Engineer</p>
-        <ul class="pts">
-          <li>Built modular Angular single-page applications for enterprise clients, with responsive, cross-browser interfaces.</li>
-          <li>Created reusable components and services, using RxJS BehaviorSubject for shared state.</li>
-          <li>Added centralized error handling, loading states and route guards, tested with Jasmine and Karma.</li>
-        </ul>
-      </div>
+
+        <div class="proj">
+          <h4>Client: Cisco, Enterprise Network Monitoring Platform (React + Node.js)</h4>
+          <ul>
+            <li>Developed a real-time monitoring platform for 1,000+ networking devices, cutting platform latency by 40% with React.memo/useMemo render optimization, virtualized lists and lazy-loaded modules.</li>
+            <li>Architected interactive network topology visualizations with React Hooks and Context API, using WebSockets and REST polling to cut troubleshooting time for NOC teams.</li>
+            <li>Owned L2VPN and L3VPN configuration and monitoring features end-to-end, from component architecture and API contracts to responsive UI and post-production monitoring.</li>
+            <li>Implemented Keycloak and Firebase Auth authentication with protected routes, Axios interceptors and RBAC across 1,000+ device management endpoints.</li>
+            <li>Set ESLint and TypeScript strict-mode standards, reducing runtime errors by 25%; used GitHub Copilot with peer review and SonarQube checks.</li>
+            <li>Mentored 3 junior developers through code reviews, architectural guidance and documentation.</li>
+          </ul>
+          <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Context API</span><span class="tag">Axios</span><span class="tag">Keycloak</span><span class="tag">Firebase Auth</span><span class="tag">Chart.js</span><span class="tag">Material UI</span><span class="tag">AWS EC2</span></div>
+        </div>
+
+        <div class="proj">
+          <h4>Client: IP Infusion, Network Management Platform (React, Next.js, Node.js)</h4>
+          <ul>
+            <li>Architected and shipped IP Maestro, a production-grade React and Next.js app to control and monitor OcNOS network devices at enterprise scale, owning the full lifecycle.</li>
+            <li>Improved performance by 30% through Next.js code-splitting, lazy-loaded routes and memoized list rendering, shrinking the initial bundle and improving Core Web Vitals.</li>
+            <li>Designed and owned a Node.js/TypeScript BFF using Next.js API routes to aggregate and reshape REST and GraphQL responses, centralize auth and enable real-time device status updates.</li>
+            <li>Built a reusable, accessible component library (Material UI, Bootstrap, SCSS), cutting new feature development time by 20%.</li>
+            <li>Documented and tested REST endpoints with Swagger and Postman as part of the API contract workflow.</li>
+          </ul>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">GraphQL</span><span class="tag">React Query</span><span class="tag">PostgreSQL</span><span class="tag">Elasticsearch</span><span class="tag">AWS S3</span><span class="tag">Jest</span><span class="tag">RTL</span><span class="tag">Swagger</span></div>
+        </div>
+
+        <div class="proj">
+          <h4>Internal POC: Network Device Health Dashboard (React / Next.js / Node.js / Kotlin)</h4>
+          <ul>
+            <li>Independently designed a Next.js SSR dashboard visualizing real-time status for 500+ simulated devices to evaluate an SSR-based architecture for future modules.</li>
+            <li>Proxied REST and GraphQL calls to telemetry services through Next.js API routes, improving Time-to-Interactive by approximately 35%.</li>
+            <li>Prototyped a lightweight Kotlin microservice to aggregate and normalize telemetry, evaluating a polyglot backend alongside the Node.js BFF.</li>
+            <li>Built a reusable component library (charts, status cards, alert badges) with Hooks, Context API and Tailwind CSS, benchmarked for parity and performance.</li>
+          </ul>
+        </div>
+
+        <div class="proj">
+          <h4>Internal POC: Network Topology Visualizer (React / Next.js / Node.js / Kotlin)</h4>
+          <ul>
+            <li>Built an interactive L2VPN/L3VPN topology visualizer to evaluate an alternate rendering approach, using Next.js dynamic routing, API routes and React Query caching.</li>
+            <li>Paired D3.js/Canvas rendering for large-scale interactive graphs and benchmarked a Kotlin graph-processing service against the Node.js API layer.</li>
+            <li>Presented benchmarks (bundle size, rendering speed, SSR benefits, backend comparison) to engineering leadership to inform framework strategy.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job rv">
+        <div class="job-head">
+          <h3>Software Engineer · <span class="co">Agility E-Services</span></h3>
+          <span class="when">Jan 2021 – Mar 2022 · Hyderabad</span>
+        </div>
+        <div class="proj">
+          <h4>Shipa Freight Platform: React + Node.js Shipment Tracking and Dashboard</h4>
+          <ul>
+            <li>Improved shipment tracking accuracy by 30% through component optimization and real-time REST API integration.</li>
+            <li>Delivered 5 interactive dashboards and booking-flow visualizations for real-time shipment monitoring.</li>
+            <li>Achieved 95% unit test coverage with Jest, React Testing Library, Karma, Jasmine and TestBed, setting testing practices adopted across the frontend team.</li>
+          </ul>
+        </div>
+        <div class="proj">
+          <h4>Agility Logistics Parks: Corporate Warehousing and Logistics Platform</h4>
+          <ul>
+            <li>Built a responsive multi-country platform covering 8+ countries and 18+ locations across the Middle East, Africa and South Asia.</li>
+            <li>Developed reusable React components for dynamic footprint and statistics sections powered by Node.js REST APIs, plus a country/region network finder with React Router and custom hooks.</li>
+            <li>Built solution-category pages and lead-generation forms integrated with Node.js backend APIs for sales-team routing.</li>
+            <li>Added English/Arabic support with React i18next and improved page load and SEO via code splitting, route-level lazy loading and server-rendered meta tags.</li>
+            <li>Used Azure DevOps for sprint tracking, build pipelines and release management.</li>
+          </ul>
+          <div class="tags"><span class="tag">React.js</span><span class="tag">React Router</span><span class="tag">i18next</span><span class="tag">Node.js</span><span class="tag">SCSS</span><span class="tag">Azure DevOps</span></div>
+        </div>
+      </article>
+
+      <article class="job rv">
+        <div class="job-head">
+          <h3>Software Engineer · <span class="co">RupayaPay Payment Pvt. Ltd.</span></h3>
+          <span class="when">Apr 2020 – Jan 2021 · Hyderabad</span>
+        </div>
+        <div class="proj">
+          <h4>Payment Gateway Platform: Angular, React and Node.js (FinTech)</h4>
+          <ul>
+            <li>Integrated Stripe payment gateway APIs with tokenization in an Angular SPA, ensuring PCI-compliant secure transactions for a high-volume system.</li>
+            <li>Built React.js components (Hooks, Context API) for internal payment-status and transaction-monitoring views, integrating REST APIs via Axios.</li>
+            <li>Implemented JWT and OAuth flows with Route Guards and HTTP interceptors, and real-time payment status updates over WebSockets.</li>
+            <li>Achieved 98% test coverage with Jasmine, Karma and TestBed, including integration tests for critical payment flows; set up Jenkins CI/CD pipelines.</li>
+          </ul>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">React.js</span><span class="tag">NgRx</span><span class="tag">RxJS</span><span class="tag">WebSockets</span><span class="tag">OAuth</span><span class="tag">Stripe API</span><span class="tag">Jenkins</span></div>
+        </div>
+      </article>
+
+      <article class="job rv">
+        <div class="job-head">
+          <h3>Software Engineer · <span class="co">USHER Technologies Pvt Ltd</span></h3>
+          <span class="when">Feb 2018 – Mar 2020 · Hyderabad</span>
+        </div>
+        <div class="proj">
+          <h4>Enterprise Web Applications: Angular Frontend Development</h4>
+          <ul>
+            <li>Built modular, component-based Angular SPAs, translating UI/UX designs into responsive, cross-browser-compatible interfaces for enterprise clients.</li>
+            <li>Developed reusable components and services using RxJS (BehaviorSubject) for shared state, reducing duplication across feature modules.</li>
+            <li>Integrated RESTful APIs with Angular HttpClient, with centralized error handling, loading states and route guards.</li>
+            <li>Wrote unit and integration tests with Jasmine and Karma, catching regressions ahead of release; worked in Agile/Scrum with backend and QA teams.</li>
+          </ul>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">RxJS</span><span class="tag">SCSS</span><span class="tag">Jasmine</span><span class="tag">Karma</span></div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<section id="skills" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+<!-- PROJECTS -->
+<section id="projects" style="background:linear-gradient(var(--bg),var(--bg2),var(--bg))">
   <div class="wrap">
-    <h2>Skills and tools</h2>
-    <p class="lead">What I reach for, grouped by the job it does.</p>
-    <div class="skills" id="skillList"></div>
+    <div class="rv">
+      <div class="eyebrow">// selected work</div>
+      <h2 class="title">Featured <span class="grad">projects</span></h2>
+      <p class="lead">A snapshot of production platforms and architecture experiments I've owned.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv">
+        <span class="kind">Production · Networking</span>
+        <h3>IP Maestro</h3>
+        <p>Production React and Next.js application for controlling and monitoring OcNOS network devices at enterprise scale, backed by a Node.js/TypeScript BFF that aggregates REST and GraphQL services.</p>
+        <div class="metric"><div><b>30%</b>faster performance</div><div><b>20%</b>faster feature delivery</div></div>
+        <div class="tags"><span class="tag hot">Next.js</span><span class="tag hot">BFF</span><span class="tag">GraphQL</span><span class="tag">React Query</span></div>
+      </article>
+      <article class="card rv" style="transition-delay:.08s">
+        <span class="kind">Production · Networking</span>
+        <h3>Real-Time Network Monitoring</h3>
+        <p>Cisco enterprise monitoring platform with live topology views, L2VPN/L3VPN management and secure RBAC access across 1,000+ devices.</p>
+        <div class="metric"><div><b>1,000+</b>devices</div><div><b>40%</b>lower latency</div></div>
+        <div class="tags"><span class="tag hot">React</span><span class="tag hot">WebSockets</span><span class="tag">Keycloak</span><span class="tag">TypeScript</span></div>
+      </article>
+      <article class="card rv" style="transition-delay:.16s">
+        <span class="kind">Production · FinTech</span>
+        <h3>Payment Gateway Platform</h3>
+        <p>PCI-compliant, high-volume payment system with Stripe tokenization, JWT/OAuth session security and real-time payment status updates.</p>
+        <div class="metric"><div><b>98%</b>test coverage</div><div><b>PCI</b>compliant</div></div>
+        <div class="tags"><span class="tag hot">Angular</span><span class="tag hot">React</span><span class="tag">NgRx</span><span class="tag">Stripe</span></div>
+      </article>
+      <article class="card rv">
+        <span class="kind">Production · Logistics</span>
+        <h3>Shipa Freight Dashboards</h3>
+        <p>Real-time shipment tracking and booking-flow visualizations delivered through five interactive dashboards for operations teams.</p>
+        <div class="metric"><div><b>30%</b>better tracking accuracy</div><div><b>95%</b>test coverage</div></div>
+        <div class="tags"><span class="tag hot">React</span><span class="tag">Chart.js</span><span class="tag">Node.js</span><span class="tag">Jest</span></div>
+      </article>
+      <article class="card rv" style="transition-delay:.08s">
+        <span class="kind">Production · Logistics</span>
+        <h3>Agility Logistics Parks</h3>
+        <p>Multi-country, bilingual (English/Arabic) corporate site for Grade A warehousing across 8+ countries and 18+ locations, with a location finder and lead-generation flows.</p>
+        <div class="metric"><div><b>8+</b>countries</div><div><b>18+</b>locations</div></div>
+        <div class="tags"><span class="tag hot">React</span><span class="tag">i18next</span><span class="tag">SEO</span><span class="tag">Node.js</span></div>
+      </article>
+      <article class="card rv" style="transition-delay:.16s">
+        <span class="kind">R&amp;D · Architecture POC</span>
+        <h3>SSR Dashboard and Topology Visualizer</h3>
+        <p>Next.js SSR dashboard for 500+ simulated devices and a D3.js/Canvas topology visualizer, benchmarked against a Kotlin microservice and the existing Node.js layer, with findings presented to engineering leadership.</p>
+        <div class="metric"><div><b>~35%</b>faster Time-to-Interactive</div><div><b>500+</b>devices</div></div>
+        <div class="tags"><span class="tag hot">Next.js SSR</span><span class="tag hot">Kotlin</span><span class="tag">D3.js</span><span class="tag">Recharts</span></div>
+      </article>
+    </div>
   </div>
 </section>
 
-<section>
+<!-- RECOGNITION -->
+<section id="recognition">
   <div class="wrap">
-    <div class="trio">
-      <div>
-        <h3>Recognition</h3>
+    <div class="rv">
+      <div class="eyebrow">// recognition</div>
+      <h2 class="title">Awards, <span class="grad">education</span> and learning</h2>
+    </div>
+    <div class="two">
+      <div class="panel rv">
+        <h3>🏆 Achievements</h3>
         <ul>
-          <li><b>Star Employee</b><span>Calsoft Inc., September 2025</span></li>
-          <li><b>Appreciation Award</b><span>Calsoft Inc., July 2025</span></li>
-          <li><b>Best UI Developer</b><span>Agility E-Services, December 2021</span></li>
+          <li>Star Employee · Calsoft Inc. <span>Sep 2025</span></li>
+          <li>Appreciation Award · Calsoft Inc. <span>Jul 2025</span></li>
+          <li>Best UI Developer · Agility E-Services <span>Dec 2021</span></li>
         </ul>
       </div>
-      <div>
-        <h3>Education</h3>
+      <div class="panel rv" style="transition-delay:.1s">
+        <h3>🎓 Education and Certifications</h3>
         <ul>
-          <li><b>B.Tech</b><span>Biju Patnaik University of Technology (BPUT), 2011 to 2015</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Certification</h3>
-        <ul>
-          <li><b>Node.js: The Complete Guide</b><span>Maximilian Schwarzmüller, Udemy</span></li>
+          <li>B.Tech · Biju Patnaik University of Technology <span>2011 – 2015</span></li>
+          <li>Node.js: The Complete Guide · Udemy <span>M. Schwarzmuller</span></li>
+          <li>Angular: The Complete Guide · Udemy <span>M. Schwarzmuller</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<div class="wrap" id="contact">
-  <div class="contact">
-    <h2>Need a frontend that holds up under real traffic?</h2>
-    <p>I am happy to talk about React, Next.js or Angular work, BFF architecture, and performance problems worth solving.</p>
-    <div class="actions">
-      <a class="btn hot" href="mailto:princekrsingh30031993@gmail.com">Email me</a>
-      <a class="btn" href="tel:+918790143950">Call +91 87901 43950</a>
-    </div>
-    <div class="facts-line">
-      <span>princekrsingh30031993@gmail.com</span>
-      <span>Hyderabad, India</span>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box rv">
+      <div class="eyebrow">// let's talk</div>
+      <h2 class="title">Looking for a <span class="grad">senior frontend engineer</span>?</h2>
+      <p class="lead">I'm open to senior and lead frontend roles building high-performance React, Next.js and Angular products. Let's talk.</p>
+      <div class="contact-list">
+        <a class="btn primary" href="mailto:princehyd1993@gmail.com?subject=Opportunity%20for%20Prince%20KR%20Singh">✉ Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/prince-kr-singh-76784a445" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+        <a class="btn" href="tel:+918969599251">📞 +91 8969599251</a>
+        <a class="btn" href="Prince_KR_Singh_Resume.pdf" download>⬇ Resume (PDF)</a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 </main>
 
 <footer>
-  <div class="wrap">Prince Singh, senior frontend developer.</div>
+  <div class="wrap">© <span id="yr"></span> Prince KR Singh · Senior Frontend Developer · Kolkata, India</div>
 </footer>
 
 <script>
-/* ---------- Theme toggle ---------- */
-var root = document.documentElement;
-var redrawNet = function () {};
-document.getElementById('theme').addEventListener('click', function () {
-  var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  var next = cur === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  try { localStorage.setItem('theme', next); } catch (e) {}
-  redrawNet();
-});
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { redrawNet(); });
+(function(){
+  var root=document.documentElement;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- Projects ---------- */
-var VIS = {
-  bff: '<svg viewBox="0 0 600 200" role="img" aria-label="Client apps call a BFF layer, which reaches REST, GraphQL and other services"><path class="ln" d="M190 100h50M360 100h60M360 100c30 0 30-55 60-55M360 100c30 0 30 55 60 55"/><rect class="box" x="40" y="60" width="150" height="80" rx="14"/><text x="115" y="96" text-anchor="middle">React</text><text x="115" y="116" text-anchor="middle">and Next.js</text><rect class="hot" x="240" y="50" width="120" height="100" rx="14"/><text x="300" y="96" text-anchor="middle">Node.js</text><text x="300" y="116" text-anchor="middle">BFF layer</text><rect class="box" x="420" y="24" width="140" height="42" rx="10"/><text x="490" y="50" text-anchor="middle">REST</text><rect class="box" x="420" y="79" width="140" height="42" rx="10"/><text x="490" y="105" text-anchor="middle">GraphQL</text><rect class="box" x="420" y="134" width="140" height="42" rx="10"/><text x="490" y="160" text-anchor="middle">Device services</text></svg>',
-  cisco: '<svg viewBox="0 0 600 200" role="img" aria-label="A network topology with one alerting device"><path class="ln" d="M300 40L160 100M300 40L440 100M160 100L90 165M160 100L230 165M440 100L370 165M440 100L510 165M300 40L300 100M300 100L230 165M300 100L370 165"/><circle class="blue" cx="300" cy="40" r="16"/><circle class="dot" cx="160" cy="100" r="12"/><circle class="dot" cx="300" cy="100" r="12"/><circle class="hot" cx="440" cy="100" r="12"/><circle class="dot" cx="90" cy="165" r="10"/><circle class="dot" cx="230" cy="165" r="10"/><circle class="dot" cx="370" cy="165" r="10"/><circle class="dot" cx="510" cy="165" r="10"/><text x="330" y="44">Core</text><text x="462" y="92">Alert</text></svg>',
-  topo: '<svg viewBox="0 0 600 200" role="img" aria-label="A network graph with a highlighted path"><path class="ln" d="M60 100L150 45M60 100L150 155M150 45L260 70M150 155L260 130M150 45L150 155M260 70L260 130M260 70L380 40M260 130L380 160M380 40L380 160M380 40L500 100M380 160L500 100M260 70L380 160"/><path class="path" d="M60 100L150 45L260 70L380 160L500 100"/><circle class="dot" cx="150" cy="155" r="10"/><circle class="dot" cx="260" cy="130" r="10"/><circle class="dot" cx="380" cy="40" r="10"/><circle class="blue" cx="60" cy="100" r="13"/><circle class="blue" cx="150" cy="45" r="10"/><circle class="blue" cx="260" cy="70" r="10"/><circle class="blue" cx="380" cy="160" r="10"/><circle class="hot" cx="500" cy="100" r="13"/><text x="40" y="132">Source</text><text x="478" y="132">Target</text></svg>',
-  pay: '<svg viewBox="0 0 600 200" role="img" aria-label="Payment flow: card, token, gateway, status"><path class="ln" d="M130 100h50M290 100h50M450 100h30"/><rect class="box" x="20" y="65" width="110" height="70" rx="12"/><text x="75" y="106" text-anchor="middle">Card</text><rect class="hot" x="180" y="65" width="110" height="70" rx="12"/><text x="235" y="106" text-anchor="middle">Token</text><rect class="box" x="340" y="65" width="110" height="70" rx="12"/><text x="395" y="106" text-anchor="middle">Gateway</text><circle class="blue" cx="520" cy="100" r="36"/><path d="M503 100l12 12 22-24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  ship: '<svg viewBox="0 0 600 200" role="img" aria-label="A shipping route above a bar chart of shipment volume"><path class="ln" d="M50 40C150 10 250 70 350 35S500 20 550 40" stroke-dasharray="5 6"/><circle class="blue" cx="50" cy="40" r="9"/><circle class="hot" cx="550" cy="40" r="9"/><rect class="bar" x="70" y="130" width="50" height="50" rx="6" opacity=".45"/><rect class="bar" x="150" y="105" width="50" height="75" rx="6" opacity=".6"/><rect class="bar" x="230" y="120" width="50" height="60" rx="6" opacity=".5"/><rect class="bar" x="310" y="85" width="50" height="95" rx="6" opacity=".75"/><rect class="bar" x="390" y="65" width="50" height="115" rx="6"/><rect class="bar" x="470" y="95" width="50" height="85" rx="6" opacity=".7"/></svg>'
-};
-var PROJECTS = [
-  { id: 'maestro', name: 'IP Maestro', tag: 'IP Infusion', kind: 'React, Next.js, Node.js BFF', vis: 'bff',
-    sum: 'A production console for controlling and monitoring OcNOS network devices at enterprise scale. I owned it from requirements through deployment and post-production monitoring.',
-    metrics: [['30%', 'faster application performance'], ['20%', 'less time to build new features']],
-    pts: ['Cut the initial bundle and improved Core Web Vitals with Next.js code splitting, lazy-loaded routes and memoized list rendering.',
-          'Designed a Node.js and TypeScript BFF on Next.js API routes that aggregates and reshapes REST and GraphQL responses and centralizes auth, enabling real-time device status updates.',
-          'Built an accessible component library on Material UI, Bootstrap and SCSS that stays responsive across breakpoints.',
-          'Documented and tested REST contracts with Swagger and Postman alongside backend teams.'],
-    stack: ['React.js', 'Next.js', 'TypeScript', 'GraphQL', 'React Query', 'Node.js', 'PostgreSQL', 'Elasticsearch', 'AWS S3', 'Jest', 'React Testing Library', 'Swagger'] },
-  { id: 'cisco', name: 'Network monitoring platform', tag: 'Cisco', kind: 'React, Node.js, WebSockets', vis: 'cisco',
-    sum: 'A real-time platform that lets NOC engineering teams watch more than 1,000 networking devices and troubleshoot faster.',
-    metrics: [['40%', 'lower platform latency'], ['1,000+', 'devices supported'], ['25%', 'fewer runtime errors']],
-    pts: ['Built interactive topology visualizations with React Hooks and Context API, fed by WebSockets and REST polling.',
-          'Owned L2VPN and L3VPN configuration and monitoring features end to end, including the RESTful API contract.',
-          'Used React.memo, useMemo, virtualized lists and lazy-loaded modules to cut latency.',
-          'Secured 1,000+ device endpoints with Keycloak and Firebase Auth, protected routes, Axios interceptors and RBAC.',
-          'Set ESLint and TypeScript strict-mode standards, and mentored 3 junior developers.'],
-    stack: ['React.js', 'TypeScript', 'Node.js', 'Context API', 'Axios', 'Keycloak', 'Firebase Auth', 'Chart.js', 'Material UI', 'AWS EC2', 'GitHub Copilot'] },
-  { id: 'poc', name: 'Rendering and backend experiments', tag: 'Internal research at Calsoft', kind: 'Next.js, D3.js, Kotlin', vis: 'topo',
-    sum: 'Two proofs of concept that tested server-side rendering and a Kotlin backend for the Cisco monitoring platform. I presented benchmarks to engineering leadership to inform framework strategy.',
-    metrics: [['~35%', 'better Time-to-Interactive'], ['500+', 'simulated devices visualized'], ['2', 'backends benchmarked']],
-    pts: ['Health dashboard: Next.js SSR and API routes proxied REST and GraphQL calls to telemetry services, reducing client-side fetching.',
-          'Topology visualizer: dynamic routing, React Query caching and D3.js with Canvas for large interactive network graphs.',
-          'Prototyped a Kotlin microservice for telemetry normalization and graph processing, and compared it with the Node.js API layer.',
-          'Compared bundle size, rendering speed, SSR benefits and backend performance against the existing platform.'],
-    stack: ['React.js', 'Next.js', 'Node.js', 'Kotlin', 'TypeScript', 'GraphQL', 'D3.js', 'React Query', 'Tailwind CSS', 'Recharts'] },
-  { id: 'pay', name: 'Payment gateway', tag: 'RupayaPay', kind: 'Angular, React, Node.js', vis: 'pay',
-    sum: 'A PCI-compliant, high-volume transaction system for a fintech company, with Angular for the main app and React for internal monitoring views.',
-    metrics: [['98%', 'test coverage'], ['PCI', 'compliant tokenized payments']],
-    pts: ['Integrated Stripe payment APIs with tokenization in an Angular SPA across all payment flows.',
-          'Built React views with Hooks and Context API for payment status and transaction monitoring.',
-          'Implemented JWT and OAuth flows with route guards and HTTP interceptors, plus real-time status over WebSockets.',
-          'Wrote Jasmine, Karma and TestBed tests, including integration tests for critical payment flows, and set up Jenkins CI/CD.'],
-    stack: ['Angular', 'React.js', 'NgRx', 'RxJS', 'TypeScript', 'WebSockets', 'JWT', 'OAuth', 'Stripe API', 'Jenkins', 'Jasmine', 'Karma'] },
-  { id: 'ship', name: 'Shipa Freight and Logistics Parks', tag: 'Agility E-Services', kind: 'React, Node.js, dashboards', vis: 'ship',
-    sum: 'A shipment tracking platform with live dashboards for operations teams, plus a multi-country warehousing site covering 8+ countries and 18+ locations.',
-    metrics: [['30%', 'better tracking accuracy'], ['5', 'interactive dashboards'], ['95%', 'unit test coverage']],
-    pts: ['Improved tracking accuracy through component optimization and real-time REST API integration.',
-          'Delivered dashboards and booking-flow visualizations with Chart.js for real-time shipment monitoring.',
-          'Built a network finder with React Router and English and Arabic support through React i18next.',
-          'Improved page load and SEO with code splitting, route-level lazy loading and server-rendered meta tags.'],
-    stack: ['React.js', 'TypeScript', 'Node.js', 'Chart.js', 'React Router', 'i18next', 'Jest', 'Karma', 'Jasmine', 'SCSS', 'Azure DevOps'] }
-];
-var tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
-function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
-function showProject(i, animate) {
-  var p = PROJECTS[i];
-  Array.prototype.forEach.call(tabs.children, function (t, k) {
-    t.setAttribute('aria-selected', k === i ? 'true' : 'false');
-    t.tabIndex = k === i ? 0 : -1;
+  /* theme */
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
   });
-  panel.innerHTML =
-    '<div class="pv">' + VIS[p.vis] + '</div>' +
-    '<div class="pbody"><p class="ptag">' + esc(p.tag) + ' | ' + esc(p.kind) + '</p>' +
-    '<h3>' + esc(p.name) + '</h3><p class="psum">' + esc(p.sum) + '</p>' +
-    '<ul class="metrics">' + p.metrics.map(function (m) { return '<li><b>' + esc(m[0]) + '</b><span>' + esc(m[1]) + '</span></li>'; }).join('') + '</ul>' +
-    '<div class="pcols"><div><h4>What I built</h4><ul class="pts">' + p.pts.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>' +
-    '<div><h4>Stack</h4><div class="chips">' + p.stack.map(function (x) { return '<span class="chip">' + esc(x) + '</span>'; }).join('') + '</div></div></div></div>';
-  if (animate) { panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap'); }
-}
-PROJECTS.forEach(function (p, i) {
-  var b = document.createElement('button');
-  b.type = 'button'; b.className = 'tab'; b.setAttribute('role', 'tab');
-  b.innerHTML = '<strong>' + esc(p.name) + '</strong><span>' + esc(p.tag) + '</span>';
-  b.addEventListener('click', function () { showProject(i, true); });
-  b.addEventListener('keydown', function (e) {
-    var n = PROJECTS.length, j = -1;
-    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') j = (i + 1) % n;
-    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') j = (i - 1 + n) % n;
-    if (j > -1) { e.preventDefault(); showProject(j, true); tabs.children[j].focus(); }
+
+  /* mobile menu */
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open);
   });
-  tabs.appendChild(b);
-});
-showProject(0, false);
+  menu.addEventListener('click',function(e){if(e.target.closest('a')){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
 
-/* ---------- Skills ---------- */
-var SKILLS = [
-  ['Frontend', ['React.js', 'Next.js', 'Angular', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3 and SCSS', 'Tailwind CSS', 'Bootstrap', 'Material UI', 'PrimeNG', 'Angular Material', 'Vue.js basics']],
-  ['State and data', ['Context API', 'Redux', 'Zustand', 'React Query', 'NgRx', 'RxJS', 'Akita', 'Apollo Client', 'Axios']],
-  ['Rendering and performance', ['SSR', 'SSG', 'ISR', 'CSR', 'Core Web Vitals', 'Code splitting', 'Lazy loading', 'Bundle optimization', 'OnPush change detection', 'AOT compilation']],
-  ['Visualization', ['D3.js', 'Recharts', 'Chart.js', 'Canvas rendering']],
-  ['Backend and APIs', ['Node.js', 'Express.js', 'BFF architecture', 'Microservices', 'REST', 'GraphQL', 'gRPC', 'WebSockets', 'Kotlin', 'Java', 'Swagger', 'Postman']],
-  ['Auth and security', ['JWT', 'OAuth', 'Keycloak', 'Firebase Auth', 'Route guards', 'HTTP interceptors', 'PCI-compliant tokenization']],
-  ['Testing and quality', ['Jest', 'React Testing Library', 'Cypress', 'Playwright', 'Jasmine', 'Karma', 'TestBed', 'ESLint', 'Prettier', 'Husky', 'SonarQube']],
-  ['Tooling, cloud and data', ['Webpack', 'Vite', 'Docker', 'Jenkins', 'GitHub Actions', 'Azure DevOps', 'Git', 'AWS S3, EC2, IAM', 'PostgreSQL', 'MongoDB', 'Elasticsearch', 'Firebase Cloud Functions']],
-  ['AI-assisted development', ['Claude Code', 'GitHub Copilot', 'Cursor', 'OpenCode', 'Unit test generation', 'Refactoring', 'Code review assistance', 'Root-cause analysis']],
-  ['Computer science', ['Data structures and algorithms', 'System design', 'SOLID principles', 'Clean code', 'Frontend design patterns', 'Agile and Scrum', 'Mentoring']]
-];
-document.getElementById('skillList').innerHTML = SKILLS.map(function (g) {
-  return '<div><h3>' + esc(g[0]) + '</h3><div class="chips">' + g[1].map(function (s) { return '<span class="chip">' + esc(s) + '</span>'; }).join('') + '</div></div>';
-}).join('');
-
-/* ---------- Hero stack map (canvas) ---------- */
-(function () {
-  var box = document.getElementById('netbox'), cv = document.getElementById('net'), ctx = cv.getContext('2d'), tip = document.getElementById('tip');
-  var rm = matchMedia('(prefers-reduced-motion: reduce)');
-  var N = [
-    { id: 'react', label: 'React', x: .46, y: .44, r: 16, kind: 'blue', note: 'Hooks, Context and memoized rendering. The main UI layer on Cisco and IP Infusion products.' },
-    { id: 'next', label: 'Next.js', x: .72, y: .22, r: 12, kind: 'blue', note: 'SSR, SSG, ISR and API routes. Powers IP Maestro.' },
-    { id: 'bff', label: 'Node.js BFF', x: .66, y: .66, r: 15, kind: 'hot', note: 'Aggregates APIs, shapes responses and centralizes auth so clients stay thin.' },
-    { id: 'ts', label: 'TypeScript', x: .22, y: .24, r: 10, kind: 'plain', note: 'Strict mode everywhere. Runtime errors dropped 25% on the Cisco frontend.' },
-    { id: 'ng', label: 'Angular', x: .15, y: .58, r: 12, kind: 'blue', note: 'NgRx, RxJS and route guards for enterprise SPAs and the payment gateway.' },
-    { id: 'gql', label: 'GraphQL', x: .87, y: .46, r: 9, kind: 'plain', note: 'Queries and mutations, with Apollo caching and BFF aggregation.' },
-    { id: 'ws', label: 'WebSockets', x: .4, y: .84, r: 9, kind: 'plain', note: 'Live device status and real-time payment updates.' },
-    { id: 'auth', label: 'JWT and OAuth', x: .82, y: .86, r: 9, kind: 'plain', note: 'Keycloak, Firebase Auth, interceptors, route guards and RBAC.' },
-    { id: 'd3', label: 'D3.js', x: .14, y: .87, r: 9, kind: 'plain', note: 'Large interactive network topology graphs with Canvas rendering.' },
-    { id: 'test', label: 'Testing', x: .09, y: .4, r: 9, kind: 'plain', note: 'Jest, React Testing Library, Cypress, Playwright, Jasmine and Karma. Up to 98% coverage.' },
-    { id: 'perf', label: 'Web Vitals', x: .48, y: .12, r: 9, kind: 'plain', note: 'Code splitting, lazy loading and render optimization, measured before and after.' },
-    { id: 'kt', label: 'Kotlin', x: .92, y: .72, r: 8, kind: 'plain', note: 'Microservice prototypes for telemetry and graph processing.' }
+  /* skills data */
+  var skills=[
+    ['⚛','React and Next.js',['React.js','Hooks','Context API','Next.js','SSR','SSG','ISR','API Routes','React Router','React Query','Axios','Redux (basics)'],1],
+    ['TS','Languages',['TypeScript','JavaScript (ES6+)','HTML5','CSS3','SCSS/SASS','Kotlin (working)','Java (working)'],1],
+    ['A','Angular',['Angular','Signals','RxJS','NgRx','Akita','Angular Material','PrimeNG','Angular CDK','Vue.js (fundamentals)'],0],
+    ['▦','UI and Visualization',['Tailwind CSS','Bootstrap 4/5','Material UI','D3.js','Recharts','Chart.js','Responsive and Accessible UI'],0],
+    ['⇄','State Management',['Zustand','Redux','Context API','NgRx','RxJS','BehaviorSubject','Akita'],0],
+    ['N','Backend and BFF',['Node.js','Express.js','TypeScript BFF','API Aggregation','Response Shaping','Microservices','REST','gRPC'],1],
+    ['⚡','Performance',['Core Web Vitals','Code Splitting','Lazy Loading','Bundle Optimization','CSR vs SSR vs ISR','OnPush','AOT'],1],
+    ['◇','APIs and Integration',['GraphQL','Apollo Client Caching','Subscriptions','WebSockets','REST','gRPC','Swagger','Postman'],0],
+    ['🔒','Auth and Security',['JWT','OAuth','Keycloak','Firebase Auth','Route Guards','HTTP Interceptors','PCI Tokenization'],0],
+    ['✓','Testing (TDD)',['Jest','React Testing Library','Cypress','Playwright','Jasmine','Karma','TestBed','Protractor'],0],
+    ['⚙','Quality and DevOps',['ESLint','Prettier','Husky','SonarQube','Git/GitHub/GitLab','Jenkins','GitHub Actions','Docker','Azure DevOps','JIRA'],0],
+    ['✦','AI-Assisted Dev',['Claude Code','Claude CLI','GitHub Copilot','Cursor','OpenCode','Code Review','Root-Cause Analysis'],1],
+    ['☁','Cloud and Data',['AWS (S3, EC2, IAM)','PostgreSQL','MongoDB','Elasticsearch','Firebase Cloud Functions'],0],
+    ['Σ','CS Fundamentals',['Data Structures and Algorithms','System Design (HLD/LLD)','SOLID','Clean Code','Design Patterns','Scalability'],0]
   ];
-  var idx = {}; N.forEach(function (n, i) { idx[n.id] = i; n.nb = {}; });
-  var pairs = [['react','next'],['react','ts'],['react','bff'],['react','perf'],['react','d3'],['react','test'],['react','ws'],['react','ng'],['next','bff'],['next','gql'],['next','perf'],['bff','gql'],['bff','auth'],['bff','kt'],['bff','ws'],['ng','ts'],['ng','ws'],['ng','test'],['ts','test']];
-  var E = pairs.map(function (p) {
-    var a = idx[p[0]], b = idx[p[1]]; N[a].nb[b] = 1; N[b].nb[a] = 1;
-    return { a: a, b: b, t: Math.random(), v: (0.00007 + Math.random() * 0.00011) * (Math.random() < .5 ? -1 : 1) };
+  var grid=document.getElementById('skillGrid');
+  skills.forEach(function(s,i){
+    var el=document.createElement('div');el.className='skill rv';el.style.transitionDelay=(i%3)*.07+'s';
+    var h=document.createElement('h3');var em=document.createElement('em');em.textContent=s[0];h.appendChild(em);h.appendChild(document.createTextNode(s[1]));
+    var tg=document.createElement('div');tg.className='tags';
+    s[2].forEach(function(t){var sp=document.createElement('span');sp.className='tag'+(s[3]?' hot':'');sp.textContent=t;tg.appendChild(sp);});
+    el.appendChild(h);el.appendChild(tg);grid.appendChild(el);
   });
-  var C = {}, W = 0, H = 0, dpr = 1, hover = -1, P = [], lastNow = 0, raf = 0, last = 0, vis = true;
-  function readColors() {
-    var s = getComputedStyle(document.documentElement);
-    ['ink', 'muted', 'accent', 'signal', 'surface'].forEach(function (k) { C[k] = s.getPropertyValue('--' + k).trim(); });
+
+  /* typed role */
+  var roles=['Senior Frontend Developer','React.js · Next.js · TypeScript','Node.js BFF Architect','Angular · RxJS · NgRx','Performance-obsessed Engineer'];
+  var typed=document.getElementById('typed');
+  if(reduce){typed.textContent=roles[0];}
+  else{
+    var r=0,c=0,del=false;
+    (function tick(){
+      var w=roles[r];
+      typed.textContent=w.slice(0,c);
+      if(!del&&c<w.length){c++;setTimeout(tick,70);}
+      else if(!del){del=true;setTimeout(tick,1500);}
+      else if(c>0){c--;setTimeout(tick,35);}
+      else{del=false;r=(r+1)%roles.length;setTimeout(tick,300);}
+    })();
   }
-  function pos(i, now) {
-    var n = N[i], d = rm.matches ? 0 : 1;
-    return [n.x * W + Math.sin(now / 1700 + i * 1.9) * 4 * d, n.y * H + Math.cos(now / 2100 + i * 2.3) * 4 * d];
+
+  /* reveal + counters */
+  function count(el){
+    var to=+el.dataset.count,suf=el.dataset.suffix||'',t0=null,dur=1400;
+    if(reduce){el.textContent=to.toLocaleString()+suf;return;}
+    function step(ts){
+      if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(to*e).toLocaleString()+suf;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   }
-  function draw(now) {
-    lastNow = now;
-    if (!W) return;
-    var sc = W / 520;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, W, H);
-    P = N.map(function (_, i) { return pos(i, now); });
-    E.forEach(function (e) {
-      var on = hover >= 0 && (e.a === hover || e.b === hover);
-      ctx.globalAlpha = hover < 0 ? .4 : (on ? 1 : .1);
-      ctx.strokeStyle = on ? C.accent : C.muted;
-      ctx.lineWidth = on ? 2.2 : 1.4;
-      ctx.beginPath(); ctx.moveTo(P[e.a][0], P[e.a][1]); ctx.lineTo(P[e.b][0], P[e.b][1]); ctx.stroke();
-      if (!rm.matches) {
-        var x = P[e.a][0] + (P[e.b][0] - P[e.a][0]) * e.t, y = P[e.a][1] + (P[e.b][1] - P[e.a][1]) * e.t;
-        ctx.globalAlpha = hover < 0 ? 1 : (on ? 1 : .15);
-        ctx.fillStyle = C.signal;
-        ctx.beginPath(); ctx.arc(x, y, 3.2 * Math.max(.8, sc), 0, 6.283); ctx.fill();
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        var n=e.target.querySelector('[data-count]');if(n&&!n.dataset.done){n.dataset.done=1;count(n);}
+        io.unobserve(e.target);
       }
     });
-    N.forEach(function (n, i) {
-      var dim = hover >= 0 && i !== hover && !N[hover].nb[i];
-      ctx.globalAlpha = dim ? .25 : 1;
-      var r = n.r * sc * (i === hover ? 1.18 : 1), x = P[i][0], y = P[i][1];
-      ctx.beginPath(); ctx.arc(x, y, r, 0, 6.283);
-      ctx.fillStyle = n.kind === 'blue' ? C.accent : n.kind === 'hot' ? C.signal : C.surface;
-      ctx.fill();
-      ctx.lineWidth = 2; ctx.strokeStyle = C.ink; ctx.stroke();
-      ctx.font = '700 ' + Math.max(11, 12.5 * sc) + 'px "DM Sans", system-ui, sans-serif';
-      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-      ctx.lineJoin = 'round'; ctx.lineWidth = 4; ctx.strokeStyle = C.surface;
-      ctx.strokeText(n.label, x, y + r + 5); ctx.fillStyle = C.ink; ctx.fillText(n.label, x, y + r + 5);
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  /* active nav link */
+  var links=[].slice.call(document.querySelectorAll('nav a.link'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  var so=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});
+      }
     });
-    ctx.globalAlpha = 1;
-  }
-  function setHover(i) {
-    if (i === hover) return;
-    hover = i;
-    if (i < 0) { tip.hidden = true; cv.style.cursor = 'default'; }
-    else {
-      var sc = W / 520, p = P[i];
-      tip.innerHTML = '<strong>' + N[i].label + '</strong>' + N[i].note;
-      tip.hidden = false; cv.style.cursor = 'pointer';
-      tip.style.left = Math.min(Math.max(p[0], 125), W - 125) + 'px';
-      if (p[1] > H * .5) { tip.style.top = (p[1] - N[i].r * sc - 12) + 'px'; tip.style.transform = 'translate(-50%,-100%)'; }
-      else { tip.style.top = (p[1] + N[i].r * sc + 30) + 'px'; tip.style.transform = 'translateX(-50%)'; }
-    }
-    if (rm.matches) draw(lastNow);
-  }
-  function pick(e) {
-    var r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top, sc = W / 520, best = -1, bd = 1e9;
-    P.forEach(function (p, i) { var d = Math.hypot(p[0] - x, p[1] - y); if (d < N[i].r * sc + 16 && d < bd) { bd = d; best = i; } });
-    setHover(best);
-  }
-  cv.addEventListener('pointermove', pick);
-  cv.addEventListener('pointerdown', pick);
-  cv.addEventListener('pointerleave', function () { setHover(-1); });
-  function loop(now) {
-    var dt = Math.min(50, now - last); last = now;
-    E.forEach(function (e) { e.t += e.v * dt; if (e.t > 1) e.t -= 1; if (e.t < 0) e.t += 1; });
-    draw(now);
-    raf = (vis && !rm.matches) ? requestAnimationFrame(loop) : 0;
-  }
-  function start() { if (raf || rm.matches || !vis) return; last = performance.now(); raf = requestAnimationFrame(loop); }
-  function size() {
-    var r = box.getBoundingClientRect(); W = r.width; H = r.height; dpr = Math.min(2, window.devicePixelRatio || 1);
-    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); draw(lastNow || performance.now());
-  }
-  redrawNet = function () { readColors(); draw(lastNow); };
-  readColors();
-  if ('ResizeObserver' in window) new ResizeObserver(size).observe(box); else { window.addEventListener('resize', size); size(); }
-  if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { vis = en[0].isIntersecting; start(); }).observe(box);
-  rm.addEventListener('change', function () { start(); draw(lastNow); });
-  start();
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){if(s)so.observe(s);});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
 })();
 </script>
 </body>
